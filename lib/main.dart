@@ -162,6 +162,8 @@ class _MyHomePageState extends State<MyHomePage> {
       borderRadius: BorderRadius.circular(20.0),
     );
 
+    final double _cardHeight = size.height / 4 - 30.0;
+
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 10.0),
       width: size.width - 20.0,
@@ -174,44 +176,20 @@ class _MyHomePageState extends State<MyHomePage> {
                 filter: ImageFilter.blur(sigmaX: 5.0, sigmaY: 5.0),
                 child: Container(
                   width: size.width / 2 - 30,
-                  height: 160.0,
+                  height: _cardHeight,
                   decoration: decoration,
-                  child: cardContent(Colors.blueAccent, Icons.view_module, 'General'),
+                  child: cardContent(
+                      Colors.blueAccent, Icons.view_module, 'General'),
                 ),
               ),
               BackdropFilter(
                 filter: ImageFilter.blur(sigmaX: 5.0, sigmaY: 5.0),
                 child: Container(
                   width: size.width / 2 - 30,
-                  height: 160.0,
+                  height: _cardHeight,
                   decoration: decoration,
-                  child: cardContent(Colors.deepPurple, Icons.directions_transit, 'Transport'),
-                ),
-              ),
-            ],
-          ),
-          SizedBox(
-            height: 15.0,
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: <Widget>[
-              BackdropFilter(
-                filter: ImageFilter.blur(sigmaX: 5.0, sigmaY: 5.0),
-                child: Container(
-                  width: size.width / 2 - 30,
-                  height: 160.0,
-                  decoration: decoration,
-                  child: cardContent(Colors.pinkAccent, Icons.shopping_basket, 'Shopping'),
-                ),
-              ),
-              BackdropFilter(
-                filter: ImageFilter.blur(sigmaX: 5.0, sigmaY: 5.0),
-                child: Container(
-                  width: size.width / 2 - 30,
-                  height: 160.0,
-                  decoration: decoration,
-                  child: cardContent(Colors.deepOrangeAccent, Icons.insert_drive_file, 'Bills'),
+                  child: cardContent(
+                      Colors.deepPurple, Icons.directions_transit, 'Transport'),
                 ),
               ),
             ],
@@ -226,18 +204,47 @@ class _MyHomePageState extends State<MyHomePage> {
                 filter: ImageFilter.blur(sigmaX: 5.0, sigmaY: 5.0),
                 child: Container(
                   width: size.width / 2 - 30,
-                  height: 160.0,
+                  height: _cardHeight,
                   decoration: decoration,
-                  child: cardContent(Colors.blue, Icons.movie, 'Entretament'),
+                  child: cardContent(
+                      Colors.pinkAccent, Icons.shopping_basket, 'Shopping'),
                 ),
               ),
               BackdropFilter(
                 filter: ImageFilter.blur(sigmaX: 5.0, sigmaY: 5.0),
                 child: Container(
                   width: size.width / 2 - 30,
-                  height: 160.0,
+                  height: _cardHeight,
                   decoration: decoration,
-                  child: cardContent(Colors.lightGreen, Icons.local_grocery_store, 'Grocery'),
+                  child: cardContent(Colors.deepOrangeAccent,
+                      Icons.insert_drive_file, 'Bills'),
+                ),
+              ),
+            ],
+          ),
+          SizedBox(
+            height: 15.0,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: <Widget>[
+              BackdropFilter(
+                filter: ImageFilter.blur(sigmaX: 5.0, sigmaY: 5.0),
+                child: Container(
+                  width: size.width / 2 - 30,
+                  height: _cardHeight,
+                  decoration: decoration,
+                  child: cardContent(Colors.blue, Icons.movie, 'Entertaiment'),
+                ),
+              ),
+              BackdropFilter(
+                filter: ImageFilter.blur(sigmaX: 5.0, sigmaY: 5.0),
+                child: Container(
+                  width: size.width / 2 - 30,
+                  height: _cardHeight,
+                  decoration: decoration,
+                  child: cardContent(
+                      Colors.lightGreen, Icons.local_grocery_store, 'Grocery'),
                 ),
               ),
             ],
