@@ -104,44 +104,8 @@ class _MyHomePageState extends State<MyHomePage> {
                     width: size.width,
                     height: 75.0,
                   ),
-                  Row(
-                    children: <Widget>[
-                      Padding(
-                        padding:
-                            const EdgeInsets.only(left: 20.0, bottom: 20.0),
-                        child: Text(
-                          'Classify transaction',
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 24.0),
-                        ),
-                      ),
-                    ],
-                  ),
-                  Row(
-                    children: <Widget>[
-                      Padding(
-                        padding:
-                            const EdgeInsets.only(left: 20.0, bottom: 20.0),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: <Widget>[
-                            Text(
-                              'Classify this transaction into a',
-                              style: TextStyle(
-                                  color: Colors.white, fontSize: 14.0),
-                            ),
-                            Text(
-                              'particular category',
-                              style: TextStyle(
-                                  color: Colors.white, fontSize: 14.0),
-                            ),
-                          ],
-                        ),
-                      )
-                    ],
-                  ),
+                  title(),
+                  subtitle(),
                   menuCards(size),
                 ],
               ),
@@ -153,6 +117,46 @@ class _MyHomePageState extends State<MyHomePage> {
         color: Colors.white70.withOpacity(0.1),
         child: bottomAppBarContent(),
       ),
+    );
+  }
+
+  Row title() {
+    return Row(
+      children: <Widget>[
+        Padding(
+          padding: const EdgeInsets.only(left: 20.0, bottom: 20.0),
+          child: Text(
+            'Classify transaction',
+            style: TextStyle(
+                color: Colors.white,
+                fontWeight: FontWeight.bold,
+                fontSize: 24.0),
+          ),
+        ),
+      ],
+    );
+  }
+
+  Row subtitle() {
+    return Row(
+      children: <Widget>[
+        Padding(
+          padding: const EdgeInsets.only(left: 20.0, bottom: 20.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              Text(
+                'Classify this transaction into a',
+                style: TextStyle(color: Colors.white, fontSize: 14.0),
+              ),
+              Text(
+                'particular category',
+                style: TextStyle(color: Colors.white, fontSize: 14.0),
+              ),
+            ],
+          ),
+        )
+      ],
     );
   }
 
