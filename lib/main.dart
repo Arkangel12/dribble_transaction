@@ -166,7 +166,7 @@ class _MyHomePageState extends State<MyHomePage> {
       borderRadius: BorderRadius.circular(20.0),
     );
 
-    final double _cardHeight = size.height / 4 - 30.0;
+    final double _cardHeight = size.height / 5;
 
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 10.0),
